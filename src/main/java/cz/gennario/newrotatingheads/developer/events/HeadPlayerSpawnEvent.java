@@ -11,35 +11,35 @@ import org.jetbrains.annotations.NotNull;
 @Getter
 public class HeadPlayerSpawnEvent extends Event implements Cancellable {
 
-    private static final HandlerList handlers = new HandlerList();
-    private final RotatingHead rotatingHead;
-    private final Player player;
-    private boolean isCancelled;
+  private static final HandlerList handlers = new HandlerList();
+  private final RotatingHead rotatingHead;
+  private final Player player;
+  private boolean isCancelled;
 
-    public HeadPlayerSpawnEvent(RotatingHead rotatingHead, Player player, boolean isCancelled) {
-        this.rotatingHead = rotatingHead;
-        this.player = player;
-        this.isCancelled = isCancelled;
-    }
+  public HeadPlayerSpawnEvent(RotatingHead rotatingHead, Player player, boolean isCancelled) {
+    this.isCancelled = isCancelled;
+    this.rotatingHead = rotatingHead;
+    this.player = player;
+  }
 
 
-    @Override
-    public boolean isCancelled() {
-        return isCancelled;
-    }
+  @Override
+  public boolean isCancelled() {
+    return isCancelled;
+  }
 
-    @Override
-    public void setCancelled(boolean cancel) {
-        this.isCancelled = cancel;
-    }
+  @Override
+  public void setCancelled(boolean cancel) {
+    this.isCancelled = cancel;
+  }
 
-    @NotNull
-    @Override
-    public HandlerList getHandlers() {
-        return handlers;
-    }
+  @NotNull
+  @Override
+  public HandlerList getHandlers() {
+    return handlers;
+  }
 
-    public static HandlerList getHandlerList() {
-        return handlers;
-    }
+  public static HandlerList getHandlerList() {
+    return handlers;
+  }
 }

@@ -185,7 +185,7 @@ public class RotatingHead {
                 packetArmorStand.setShowName(false);
 
                 packetArmorStand.setHasNoGravity(true);
-                packetArmorStand.setGlowing(glowing);
+                packetEntity.setGlowing(glowing);
 
                 packetArmorStand.setEquipment(equipment);
                 break;
